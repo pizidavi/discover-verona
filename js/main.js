@@ -38,7 +38,6 @@ $(document).ready(function() {
     _this.find('[data-time] b').each(function(i) {
       $(this).text(WHEN[index].time[i]);
     });
-    // _this.find('[data-time]').html('Dalle <b>'+WHEN[index].time[0]+'</b> alle <b>'+WHEN[index].time[1]+'</b>');
   });
 
   $('a[data-social-facebook]').attr('href', SOCIAL.facebook);
@@ -50,9 +49,11 @@ $(document).ready(function() {
     if (video.get(0).paused) {
       video.trigger('play');
       video_forced_pause = false;
+      umami.trackEvent('video-playing', 'click');
     } else {
       video.trigger('pause');
       video_forced_pause = true;
+      umami.trackEvent('video-paused', 'click');
     }
   });
 
