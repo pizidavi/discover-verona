@@ -84,16 +84,14 @@ $(document).ready(function() {
   });
 
   $('#horizontalTab').easyResponsiveTabs({
-    type: 'default', // Types: default, vertical, accordion           
+    type: 'default',      
     width: 'auto',
     fit: true,
     closed: 'accordion',
-    activate: function (event) { // Callback function if tab is switched
-      const $tab = $(this);
-      const $info = $('#tabInfo');
-      const $name = $('span', $info);
-      $name.text($tab.text());
-      $info.show();
+    activate: function (e) {
+      const tab = $(this);
+      const tabId = tab.attr('aria-controls')?.split('-')[1];
+      umami.trackEvent('tab-'+tabId, 'click');
     }
   });
 
