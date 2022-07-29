@@ -559,7 +559,7 @@ a.callbacks_nav.callbacks3_nav.next {
 
 .banner-text h6 {
 	font-size: 17px;
-	letter-spacing: 6px;
+	letter-spacing: 4px;
 	text-transform: capitalize;
 	color: var(--white);
 }
@@ -586,7 +586,7 @@ a.callbacks_nav.callbacks3_nav.next {
 	text-transform: capitalize;
 }
 
-span.video-w3ls {
+.video-w3ls {
 	font-size: 2.5em;
 	color: var(--light-blue);
 	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.72);
@@ -2677,7 +2677,7 @@ ul.agile_footer_grid_list li i {
 		width: 63%;
 	}
 
-	span.video-w3ls {
+	.video-w3ls {
 		font-size: 2.2em;
 	}
 
@@ -3446,7 +3446,7 @@ ul.agile_footer_grid_list li i {
 		letter-spacing: 1px;
 	}
 
-	span.video-w3ls {
+	.video-w3ls {
 		font-size: 2.1em;
 	}
 

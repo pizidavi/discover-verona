@@ -9,6 +9,15 @@
   border: none;
 }
 
+.more-button a {
+  display: flex;
+  align-items: center;
+}
+
+  .more-button a .video-w3ls {
+    font-size: 1.8em;
+  }
+
 .navbar-default .navbar-nav > li > a {
   text-shadow: 1px 1px 3px var(--black)
 }
@@ -43,7 +52,7 @@ ul.social-agileinfo li a {
   font-size: 20px;
 }
 
-  ul.social-agileinfo li a:hover i.fa-facebook {
+  ul.social-agileinfo li a:hover i.fa-facebook-f {
     color: #3474db;
   }
 
