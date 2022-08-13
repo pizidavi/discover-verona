@@ -1,5 +1,10 @@
 /* Custom CSS */
 
+@font-face {
+  font-family: 'Dscvr';
+  src: url(../fonts/Dscvr.otf);
+}
+
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -81,7 +86,13 @@ ul.social-agileinfo li a {
 .banner-text h6,
 .banner-text p,
 h3.heading-agileinfo {
-  text-shadow: 1px 2px 1px var(--black);
+  text-shadow: 1px 1.3px 1px var(--black);
+}
+
+.banner-text h3 {
+  font-family: 'Dscvr';
+  font-weight: 100;
+  letter-spacing: 7px;
 }
 
 .about-w3-grids {
