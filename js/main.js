@@ -49,11 +49,11 @@ $(document).ready(function() {
     if (video.get(0).paused) {
       video.trigger('play');
       video_forced_pause = false;
-      umami.trackEvent('video-playing', 'click');
+      umami.trackEvent('video-control', { type: 'click', action: 'playing' });
     } else {
       video.trigger('pause');
       video_forced_pause = true;
-      umami.trackEvent('video-paused', 'click');
+      umami.trackEvent('video-control', { type: 'click', action: 'paused' });
     }
   });
 
@@ -92,7 +92,7 @@ $(document).ready(function() {
     activate: function (e) {
       const tab = $(this);
       const tabId = tab.attr('aria-controls')?.split('-')[1];
-      umami.trackEvent('tab-'+tabId, 'click');
+      umami.trackEvent('change-about-tab', { type: 'click', tabId: tabId });
     }
   });
 
