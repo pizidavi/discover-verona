@@ -1,5 +1,21 @@
 /* Custom CSS */
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 #video-background .video-control {
   position: absolute;
   bottom: 1em;
@@ -15,7 +31,7 @@
 }
 
   .more-button a .video-w3ls {
-    font-size: 1.8em;
+    font-size: 2em;
   }
 
 .navbar-default .navbar-nav > li > a {
@@ -63,24 +79,32 @@ ul.social-agileinfo li a {
 .banner-text h3,
 .banner-text h6,
 .banner-text p,
-/* h2.heading-agileinfo, */
 h3.heading-agileinfo {
-  text-shadow: 1px 0px 0px var(--black), 0px 1px 0px var(--black);
+  text-shadow: 1px 2px 1px var(--black);
 }
 
 .about-w3-grids {
   padding-bottom: 2.5em;
 }
 
+  .about-w3-grids:not(:first-child) {
+    margin-left: 2% !important;
+  }
+
 .services-img-w3-agile {
   background-position: center;
+}
+
+.para-agileits-w3layouts {
+  text-align: justify;
 }
 
 .reasons-agileits-w3layouts {
   padding-bottom: 6em;
 }
 
-h2.heading-agileinfo svg, h3.heading-agileinfo svg {
+h2.heading-agileinfo svg,
+h3.heading-agileinfo svg {
   display: block;
   position: relative;
   top: 4px;
@@ -89,9 +113,15 @@ h2.heading-agileinfo svg, h3.heading-agileinfo svg {
   height: 18px;
   fill: var(--orange);
   transform: rotate(15deg);
-  /* filter: drop-shadow(1px 1px 1px #585757);*/
 }
 
 .footer {
   padding-top: 3em;
+}
+
+@media(max-width: 768px) {
+  #horizontalTab .resp-tabs-container svg {
+    width: 21px;
+    height: 21px;
+  }
 }
