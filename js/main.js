@@ -2,7 +2,7 @@
 
 // Modifica le informazioni di contatto
 const CONTACT = {
-  email: "discover.cusverona@gmail.com"
+  email: 'discover.cusverona@gmail.com'
 };
 const WHERE = {
   text: 'Parco San Giacomo, Verona',
@@ -97,4 +97,11 @@ $(document).ready(function() {
   });
 
   $('#year').text(new Date().getFullYear());
+});
+
+$(window).on('load', function() {
+  $('iframe').each(function() {
+    const _this = $(this);
+    _this.attr('src', _this.attr('data-src'));
+  });
 });

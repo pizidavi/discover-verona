@@ -5,31 +5,62 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" prefix="og:https://ogp.me/ns#">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
   <meta name="keywords" content="Ultimate, Frisbee, Verona" />
-  <meta name="description" content="Ultimate Verona">
+  <meta name="description" content="Uno sport di squadra emozionante e senza contatto, giocato da migliaia di persone in tutto il mondo in squadre Open, Mixed e Women.">
+
+  <meta property="og:url" content="https://www.ultimateverona.it" />
+  <meta property="og:title" content="Ultimate Verona" />
+  <meta property="og:description" content="Uno sport di squadra emozionante e senza contatto, giocato da migliaia di persone in tutto il mondo in squadre Open, Mixed e Women."/>
+  <meta property="og:image" content="https://www.ultimateverona.it/images/logo_landscape.webp" />
+  <meta property="og:image:secure_url" content="https://www.ultimateverona.it/images/logo_landscape.webp" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta property="og:image:alt" content="Landscape logo Discover" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Ultimate Verona</title>
 
   <!--css links-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
-  <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/popuo-box.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/easy-responsive-tabs.min.css" rel="stylesheet" type="text/css"  media="all" />
+  <link href="css/custom.min.css" rel="stylesheet" type="text/css" media="all" />
   <!--//css links-->
 
   <!--fonts-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--//fonts-->
 
-  <script async defer data-website-id="3d9dabda-44aa-46ba-b95a-922601833e88" src="https://pizidavi-stats.herokuapp.com/umami.js"></script>
+  <!--favicon-->
+  <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="images/favicon/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32" />
+  <link href="images/favicon/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16" />
+  <link href="images/favicon/site.webmanifest" rel="manifest" />
+  <!--//favicon-->
 
-  <title>Ultimate Verona</title>
+  <!--schema-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.ultimateverona.it",
+    "logo": "https://www.ultimateverona.it/images/logo.webp"
+  }
+  </script>
+  <!--//schema-->
+
+  <script async defer data-website-id="3d9dabda-44aa-46ba-b95a-922601833e88" src="https://pizidavi-stats.herokuapp.com/umami.js"></script>
 </head>
 <body>
   <noscript>Questo sito necessita di Javascript per funzionare</noscript>
@@ -37,37 +68,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- Header -->
   <div id="home" class="banner w3l">
     <div id="video-background">
-      <div style="width:100%;height:100%;position:absolute;z-index:1;"></div>
+      <div class="video-hider"></div>
       <video muted loop autoplay>
         <source src="images/background.mp4" type="video/mp4" />
       </video>
-      <button class="video-control" title="Play/Pause" style="z-index:2;">
+      <button class="video-control" title="Play/Pause">
         <i class="fa fa-pause"></i>
       </button>
     </div>
     <div class="container pt-4">
-      <div class="banner-info wow bounceInDown" data-wow-duration="2s" data-wow-delay="0s">
+      <div class="banner-info wow bounceInDown" data-wow-duration="10s" data-wow-delay="0s">
         <div class="callbacks_container">
           <ul class="rslides" id="slider3">
             <li>
               <div class="banner-text">
                 <h6>CUS Verona Ultimate</h6>
-                <h3><span style="color:var(--blue);">D</span><span style="color:var(--yellow);">iscover</span></h3>
-                <p>Find the treasures of the underwater world.</p>
+                <h1><span style="color:var(--blue);">D</span><span style="color:var(--yellow);">iscover</span></h1>
+                <p>Who gets more air than a basketball player, more floor than a rugby player and pulls at every tournament?<br>That’s an <b>Ultimate Player</b></p>
               </div>
             </li>
             <li>
               <div class="banner-text">
                 <h6>CUS Verona Ultimate</h6>
-                <h3><span style="color:var(--blue)">D</span><span style="color:var(--yellow);">iscover</span></h3>
-                <p>See the underwater world with your own eyes</p>
+                <h1><span style="color:var(--blue)">D</span><span style="color:var(--yellow);">iscover</span></h1>
+                <p>"..L'Ultimate combina velocità, grazia e potenti scatti con un ritmo estenuante."<br><small>The Wall Street Journal</small></p>
               </div>
             </li>
             <li>
               <div class="banner-text">
                 <h6>CUS Verona Ultimate</h6>
-                <h3><span style="color:var(--blue)">D</span><span style="color:var(--yellow);">iscover</span></h3>
-                <p>Discover mysterious underwater secrets</p>
+                <h1><span style="color:var(--blue)">D</span><span style="color:var(--yellow);">iscover</span></h1>
+                <p>Lo sport dà il meglio di sé quando ci unisce.</p>
               </div>
             </li>
           </ul>
@@ -82,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <div id="small-dialog" class="mfp-hide w3ls_small_dialog wthree_pop">
           <div class="responsive-iframe-container">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jDI2OAlSvpA" title="Mixed Highlight Reel--2019 National Championships" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="responsive-iframe" data-src="https://www.youtube.com/embed/jDI2OAlSvpA" loading="lazy" title="Mixed Highlight Reel--2019 National Championships" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -100,7 +131,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <h3>Scrivici</h3>
         <p><a href="mailto:discover.cusverona@gmail.com" class="umami--click--open-email" data-contact-email>discover.cusverona@gmail.com</a></p>
       </div>
-      <div class="clearfix"> </div>
     </div>
     <div class="bnr-btm-grids-agileits">
       <div class="bnr-btm-icon">
@@ -108,9 +138,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
       <div class="bnr-btm-info">
         <h3>Trovaci</h3>
-        <p><a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" class="umami--click--open-maps" target="_blank" data-where>Parco San Giacomo, Verona</a></p>
+        <p><a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" title="Google Maps" class="umami--click--open-maps" target="_blank" rel="noopener" data-where>Parco San Giacomo, Verona</a></p>
       </div>
-      <div class="clearfix"> </div>
     </div>
     <div class="bnr-btm-grids-agileits">
       <div class="bnr-btm-icon">
@@ -119,11 +148,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <div class="bnr-btm-info">
         <h3>Seguici</h3>
         <ul class="social-agileinfo">
-          <li><a href="https://www.facebook.com/DiscoverUltimateVerona" class="umami--click--open-facebook" title="Facebook" target="_blank" data-social-facebook><i class="fa-brands fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/discover_ultimate_verona" class="umami--click--open-instagram" title="Instagram" target="_blank" data-social-instagram><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/DiscoverUltimateVerona" title="Facebook" class="umami--click--open-facebook" title="Facebook" target="_blank" rel="noopener" data-social-facebook><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/discover_ultimate_verona" title="Instagram" class="umami--click--open-instagram" title="Instagram" target="_blank" rel="noopener" data-social-instagram><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
       </div>
-      <div class="clearfix"> </div>
     </div>
     <div class="clearfix"></div>
   </div>
@@ -140,13 +168,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <ul class="resp-tabs-list">
           <li><i class="fa-solid fa-book-open"></i></li>
           <li>
-            <svg width="36px" height="36px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto" style="transform: rotate(-20deg); "><path d="M35 21.526C35 26.758 27.389 31 18 31S1 26.758 1 21.526S7.625 11 18 11s17 5.294 17 10.526z"></path><ellipse cx="18" cy="19.502" rx="16" ry="8.5"></ellipse><path d="M18 11.331c-6.449 0-11.5 2.491-11.5 5.672c0 3.18 5.051 5.671 11.5 5.671c6.448 0 11.5-2.491 11.5-5.671c0-3.181-5.052-5.672-11.5-5.672z" style="fill:white;"></path><ellipse cx="18" cy="18.002" rx="12" ry="6"></ellipse><path d="M29 18.002c-1.81 3.118-7 4-11 4s-9.19-.882-11-4c-.75-1.292-1.5 1.083.5 3.083S14 24.402 18 24.402s8.5-1.317 10.5-3.317s1.25-4.374.5-3.083z" style="fill:white;"></path></svg>
+            <svg width="36px" height="36px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" class="d-block mx-auto" style="transform:rotate(-20deg);"><path d="M35 21.526C35 26.758 27.389 31 18 31S1 26.758 1 21.526S7.625 11 18 11s17 5.294 17 10.526z"></path><ellipse cx="18" cy="19.502" rx="16" ry="8.5"></ellipse><path d="M18 11.331c-6.449 0-11.5 2.491-11.5 5.672c0 3.18 5.051 5.671 11.5 5.671c6.448 0 11.5-2.491 11.5-5.671c0-3.181-5.052-5.672-11.5-5.672z" style="fill:white;"></path><ellipse cx="18" cy="18.002" rx="12" ry="6"></ellipse><path d="M29 18.002c-1.81 3.118-7 4-11 4s-9.19-.882-11-4c-.75-1.292-1.5 1.083.5 3.083S14 24.402 18 24.402s8.5-1.317 10.5-3.317s1.25-4.374.5-3.083z" style="fill:white;"></path></svg>
           </li>
-          <li><i class="fa-solid fa-people-group"></i></i></li>
+          <li><i class="fa-solid fa-people-group"></i></li>
         </ul>
         <div class="resp-tabs-container">
           <div class="row tab1">
-            <div class="col-sm-12 col-md-6 services-img-w3-agile" style="background-image: url(images/what_is_ultimate.jpg);"></div>
+            <div class="col-sm-12 col-md-6 services-img-w3-agile" style="background-image: url(images/what_is_ultimate.webp);"></div>
             <div class="col-sm-12 col-md-6 services-right-agileits">
               <h4>Che cos'è l' Ultimate</h4>
               <p class="para-agileits-w3layouts">
@@ -155,7 +183,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 e un campo. L'Ultimate è uno sport di squadra completo, dai tratti agonistici e tecnici 
                 simili ad altri sport, che non prevede il contatto fisico e dai risvolti educativi eccezionali.
               </p>
-              <a class="read-agileits umami--click--read-more-tab0" href="https://www.fifd.it/pages/ultimate-cos-e" target="_blank">Read More</a>
+              <a class="read-agileits umami--click--read-more-tab0" href="https://www.fifd.it/pages/ultimate-cos-e" target="_blank" rel="noopener">Read More</a>
             </div>
           </div>
 
@@ -169,19 +197,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 Se l'attacco perde il possesso del disco, cambiano i ruoli di attacco e difesa.
                 Chi è in possesso del disco non può correre.
               </p>
-              <a class="read-agileits umami--click--read-more-tab1" href="https://www.fifd.it/pages/ultimate-come-si-gioca" target="_blank">Read More</a>
+              <a class="read-agileits umami--click--read-more-tab1" href="https://www.fifd.it/pages/ultimate-come-si-gioca" target="_blank" rel="noopener">Read More</a>
             </div>
             <div class="col-sm-12 col-md-6">
               <div class="d-none d-lg-block mt-5"></div>
               <div class="responsive-iframe-container">
-                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zEKnqFBajiI" title="How To Play Ultimate Frisbee" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="responsive-iframe" data-src="https://www.youtube.com/embed/zEKnqFBajiI" loading="lazy" title="How To Play Ultimate Frisbee" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="d-block d-lg-none mb-4"></div>
             </div>
           </div>
 
           <div class="row tab3">
-            <div class="col-sm-12 col-md-6 services-img-w3-agile" style="background-image: url(images/our_team.jpg);"></div>
+            <div class="col-sm-12 col-md-6 services-img-w3-agile" style="background-image: url(images/our_team.webp);"></div>
             <div class="col-sm-12 col-md-6 services-right-agileits bar-grids bargrids-left">
               <h4>Le nostre abilità</h4>
               <h6>Simpatia <span>90%</span></h6>
@@ -205,7 +233,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- //about -->
 
   <!-- Join Us -->
-  <div class="reasons-agileits-w3layouts" style="background-color: #171717; background-image: url(images/bottom_background.jpg);">
+  <div id="join-us" class="reasons-agileits-w3layouts" style="background-image:url(images/bottom_background.webp);">
     <div class="container">
       <h3 class="heading-agileinfo white-w3ls">
         Join us
@@ -217,9 +245,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>
           <h4 class="mt-2" data-weekday>Lunedì</h4>
-          <p class="para-agileits-w3layouts" style="text-align:center; line-height: 25px;" data-time>
+          <p class="para-agileits-w3layouts" data-time>
             Dalle <b>19.30</b> alle <b>21.30</b> <br>
-            <a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" class="umami--click--open-maps" target="_blank" style="color:inherit;" data-where>Parco San Giacomo, Verona</a>
+            <a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" title="Google Maps" class="umami--click--open-maps" target="_blank" rel="noopener" data-where>Parco San Giacomo, Verona</a>
           </p>
           <small class="d-block mt-3">L'allenamento di prova è <b>GRATIS</b></small>
         </div>
@@ -228,9 +256,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>
           <h4 class="mt-2" data-weekday>Giovedì</h4>
-          <p class="para-agileits-w3layouts" style="text-align:center; line-height: 25px;" data-time>
+          <p class="para-agileits-w3layouts" data-time>
             Dalle <b>19.30</b> alle <b>21.30</b> <br>
-            <a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" class="umami--click--open-maps" target="_blank" style="color:inherit;" data-where>Parco San Giacomo, Verona</a>
+            <a href="https://goo.gl/maps/UsZZHLuT4jB57wjt5" title="Google Maps" class="umami--click--open-maps" target="_blank" rel="noopener" data-where>Parco San Giacomo, Verona</a>
           </p>
           <small class="d-block mt-3">L'allenamento di prova è <b>GRATIS</b></small>
         </div>
@@ -242,23 +270,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!-- footer -->
   <div class="footer">
     <div class="container">
-      <div class="agileinfo_copyright" style="margin-top:0;">
+      <div class="agileinfo_copyright">
         <p>© <span id="year">2022</span> Discover Ultimate Verona</p>
       </div>
-      <div class="agileinfo_copyright" style="margin-top:0;padding-top:0;">
-        <p style="font-size:11px;">© 2017 Plunge. All Rights Reserved | Design by <a href="https://w3layouts.com/" class="umami--click--open-W3layouts">W3layouts</a></p>
+      <div class="agileinfo_copyright p-0">
+        <p>© 2017 Plunge. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank" rel="noopener" class="umami--click--open-W3layouts">W3layouts</a></p>
       </div>
     </div>
   </div>
   <!--//footer -->
 
   <!-- js -->
-  <script src="js/jquery-2.2.3.min.js"></script>
-  <script src="js/bootstrap-3.1.1.min.js"></script>
-  <script src="js/jquery.magnific-popup.js"></script>
-  <script src="js/responsiveslides.min.js"></script>
-  <script src="js/easy-responsive-tabs.js"></script>
-  <script src="js/main.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script defer src="js/jquery.magnific-popup.min.js"></script>
+  <script defer src="js/easy-responsive-tabs.min.js"></script>
+  <script defer src="js/responsiveslides.min.js"></script>
+  <script defer src="js/main.js"></script>
   <!--//js -->
 </body>
 </html>

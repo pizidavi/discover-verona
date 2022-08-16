@@ -1,0 +1,6 @@
+# This robots.txt file controls crawling of URLs under https://www.ultimateverona.it
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ultimateverona.it/sitemap.xml

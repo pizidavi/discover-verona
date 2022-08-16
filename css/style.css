@@ -502,38 +502,6 @@ ul.social-slide li i.mac {
 	/* margin: 0 0px; */
 }
 
-a.callbacks_nav.callbacks1_nav.prev {
-	background: transparent url(../images/arrr1.png) no-repeat 0px 0px;
-	left: 97.5%;
-	height: 32px;
-	width: 32px;
-	top: 78% !important;
-}
-
-.callbacks_nav.next {
-	background: transparent url("../images/arrr2.png") no-repeat 0px 0px;
-	left: 97.5%;
-	height: 32px;
-	width: 32px;
-	top: 53%;
-}
-
-a.callbacks_nav.callbacks3_nav.prev {
-	background: transparent url("../images/arrow4.png") no-repeat left top;
-	height: 62px;
-	width: 64px;
-	top: 61%;
-	left: 0;
-}
-
-a.callbacks_nav.callbacks3_nav.next {
-	background: transparent url("../images/arrow3.png") no-repeat -1px 0px;
-	left: 95%;
-	height: 62px;
-	width: 64px;
-	top: 61%;
-}
-
 /*-- Slider part Ends Here --*/
 .banner-text {
 	width: 70%;
@@ -546,7 +514,7 @@ a.callbacks_nav.callbacks3_nav.next {
 	top: 90% !important;
 }
 
-.banner-text h3 {
+.banner-text h1 {
 	color: var(--white);
 	font-size: 72px;
 	text-transform: capitalize;
@@ -2392,40 +2360,9 @@ ul.agile_footer_grid_list li i {
 	color: inherit;
 	text-decoration: none;
 }
-
-/*.agileinfo_copyright p a:hover {
-	color: var(--white);
-}*/
-
 /*--//footer--*/
-/*-- to-top --*/
-#toTop {
-	display: none;
-	text-decoration: none;
-	position: fixed;
-	bottom: 30px;
-	right: 3%;
-	overflow: hidden;
-	z-index: 999;
-	width: 32px;
-	height: 32px;
-	border: none;
-	text-indent: 100%;
-	background: url(../images/arr.png) no-repeat 0px 0px;
-}
 
-#toTopHover {
-	width: 32px;
-	height: 32px;
-	display: block;
-	overflow: hidden;
-	float: right;
-	opacity: 0;
-	-moz-opacity: 0;
-	filter: alpha(opacity=0);
-}
 
-/*-- //to-top --*/
 /*--responsive--*/
 @media(max-width:1680px) {}
 
@@ -2966,21 +2903,6 @@ ul.agile_footer_grid_list li i {
 	.bnr-btm-grids-agileits:nth-child(1),
 	.bnr-btm-grids-agileits:nth-child(2) {
 		margin-bottom: 1.5em !important;
-	}
-
-	a.callbacks_nav.callbacks1_nav.prev {
-		background: transparent url(../images/arrr1.png) no-repeat 0px 0px;
-		background-size: 20px;
-		height: 20px;
-		width: 20px;
-		top: 83% !important;
-	}
-
-	.callbacks_nav.next {
-		background: transparent url(../images/arrr2.png) no-repeat 0px 0px;
-		background-size: 20px;
-		height: 20px;
-		width: 20px;
 	}
 
 	.callbacks_nav {

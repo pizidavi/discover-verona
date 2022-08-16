@@ -1,10 +1,3 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  background: var(--white);
-  font-weight: 500;
-}
-
 ul.resp-tabs-list,
 p {
   margin: 0px;
