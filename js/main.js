@@ -44,8 +44,8 @@ $(document).ready(function() {
   $('a[data-social-instagram]').attr('href', SOCIAL.instagram);
 
   let video_forced_pause = false;
-  const video = $('#video-background video');
-  $('#video-background .video-control').on('click', () => {
+  const video = $('.video-background video');
+  $('.video-background .video-control').on('click', () => {
     if (video.get(0).paused) {
       video.trigger('play');
       video_forced_pause = false;
