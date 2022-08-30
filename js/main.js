@@ -5,8 +5,8 @@ const CONTACT = {
   email: 'discover.cusverona@gmail.com'
 };
 const WHERE = {
-  text: 'Parco San Giacomo, Verona',
-  mapsLink: 'https://goo.gl/maps/UsZZHLuT4jB57wjt5',
+  text: 'Via Montorio 114, Verona',
+  mapsLink: 'https://goo.gl/maps/yFJq3i7R1nDyJrof7',
 };
 const WHEN = [
   {
