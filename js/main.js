@@ -20,7 +20,7 @@ const WHEN = [
 ];
 const SOCIAL = {
   facebook: 'https://www.facebook.com/DiscoverUltimateVerona',
-  instagram: 'https://www.instagram.com/discover_ultimate_verona',
+  instagram: 'https://www.instagram.com/discover.ultimate.verona',
 };
 // ---
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
     closed: 'accordion',
     activate: function (e) {
       const tab = $(this);
-      const tabId = tab.attr('aria-controls')?.split('-')[1];
+      const tabId = (tab.attr('aria-controls') || '').split('-')[1];
       umami.trackEvent('change-about-tab', { type: 'click', tabId: tabId });
     }
   });
