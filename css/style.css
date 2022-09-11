@@ -36,6 +36,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   background: #555
 }
 
+::-webkit-input-placeholder {
+  color: #999 !important
+}
+
+:-moz-placeholder {
+  color: #999 !important
+}
+
+::-moz-placeholder {
+  color: #999 !important
+}
+
+:-ms-input-placeholder {
+  color: #999 !important
+}
+
 html {
   scroll-behavior: smooth
 }
@@ -602,20 +618,85 @@ a.read-agileits:hover {
   background: var(--orange)
 }
 
-::-webkit-input-placeholder {
-  color: #999 !important
+.share-btn {
+  position: relative;
+  border: 0;
+  padding: 12px 48px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: #fff;
+  background: linear-gradient(30deg, var(--light-blue), var(--blue));
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .3s;
 }
 
-:-moz-placeholder {
-  color: #999 !important
+.share-btn:hover {
+  border-radius: 0;
 }
 
-::-moz-placeholder {
-  color: #999 !important
+.share-btn .sm-btns {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
 }
 
-:-ms-input-placeholder {
-  color: #999 !important
+.share-btn .sm-btns a {
+  color: #fff;
+  transition: .3s;
+}
+
+.share-btn .text,
+.share-btn .icon {
+  display: inline-block;
+  transition: .3s;
+}
+
+.share-btn .icon {
+  margin-left: 5px;
+  font-size: 90%;
+  transition-delay: 60ms;
+}
+
+.share-btn .sm-btns a:nth-child(2) {
+  transition-delay: 60ms;
+}
+
+.share-btn .sm-btns a:nth-child(3) {
+  transition-delay: 120ms;
+}
+
+.share-btn:hover .text,
+.share-btn:hover .icon,
+.share-btn:hover .sm-btns a {
+  transform: translateY(-40px);
+}
+
+.share-btn .sm-btns a:hover {
+  opacity: .7;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.countdown li {
+  font-size: 1.3em;
+  list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.countdown li span {
+  display: block;
+  font-size: 4rem;
 }
 
 .footer {
@@ -970,6 +1051,11 @@ a.read-agileits:hover {
     float: left
   }
 
+  .resp-tabs-container img {
+    width: 36px;
+    height: 36px;
+  }
+
   .resp-tab-active:before {
     transform: rotate(0);
     -webkit-transform: rotate(0);
@@ -1136,7 +1222,7 @@ a.read-agileits:hover {
     padding-top: 0 !important
   }
 
-  .resp-tabs-container svg {
+  .resp-tabs-container img {
     width: 21px;
     height: 21px
   }
@@ -1151,6 +1237,14 @@ a.read-agileits:hover {
 
   .resp-tab-active:before {
     display: none
+  }
+
+  .countdown li {
+    font-size: 1.2rem;
+  }
+
+  .countdown li span {
+    font-size: 2.5rem;
   }
 }
 

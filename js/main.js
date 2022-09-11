@@ -22,20 +22,24 @@ const SOCIAL = {
   facebook: 'https://www.facebook.com/DiscoverUltimateVerona',
   instagram: 'https://www.instagram.com/discover.ultimate.verona',
 };
+const OPEN_DAYS = [
+  '2022-09-26',
+  '2022-10-06'
+];
 // ---
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   $('[data-contact-email]').text(CONTACT.email);
-  $('a[data-contact-email]').attr('href', 'mailto:'+CONTACT.email);
+  $('a[data-contact-email]').attr('href', 'mailto:' + CONTACT.email);
 
   $('[data-where]').text(WHERE.text);
   $('a[data-where]').attr('href', WHERE.mapsLink);
 
-  $('[data-when]').each(function(index) {
+  $('[data-when]').each(function (index) {
     const _this = $(this);
     _this.find('[data-weekday]').text(WHEN[index].weekday);
-    _this.find('[data-time] b').each(function(i) {
+    _this.find('[data-time] b').each(function (i) {
       $(this).text(WHEN[index].time[i]);
     });
   });
@@ -85,7 +89,7 @@ $(document).ready(function() {
   });
 
   $('#horizontalTab').easyResponsiveTabs({
-    type: 'default',      
+    type: 'default',
     width: 'auto',
     fit: true,
     closed: 'accordion',
@@ -97,11 +101,46 @@ $(document).ready(function() {
   });
 
   $('#year').text(new Date().getFullYear());
+
+  const now = new Date();
+  const day = OPEN_DAYS
+    .map(d => new Date(d))
+    .filter(d => d - now >= 0)
+    .sort((a,b) => a - b)[0];
+  if (day) {
+    $('#countdown').removeClass('hidden');
+    CountDown('.countdown', day);
+  }
 });
 
-$(window).on('load', function() {
-  $('iframe').each(function() {
+$(window).on('load', function () {
+  $('iframe').each(function () {
     const _this = $(this);
     _this.attr('src', _this.attr('data-src'));
   });
 });
+
+const CountDown = (selector, date) => {
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+  const countdown = $(selector);
+  const time = date.getTime();
+
+  const x = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = time - now;
+
+    countdown.find('[data-countdown-text="days"]').text(Math.floor(distance / (day)));
+    countdown.find('[data-countdown-text="hours"]').text(Math.floor((distance % (day)) / (hour)));
+    countdown.find('[data-countdown-text="minutes"]').text(Math.floor((distance % (hour)) / (minute)));
+    countdown.find('[data-countdown-text="seconds"]').text(Math.floor((distance % (minute)) / second));
+
+    if (distance < 0) {
+      countdown.remove();
+      clearInterval(x);
+    }
+  }, 1000);
+};

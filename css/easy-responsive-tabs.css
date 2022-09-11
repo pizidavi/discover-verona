@@ -24,6 +24,13 @@ ul.resp-tabs-list {
   text-align: center
 }
 
+.resp-tabs-list li img {
+  display: block;
+  margin: auto;
+  width: 36px;
+  height: 36px;
+}
+
 .resp-tabs-container {
   padding: 0 !important;
   background-color: var(--white);
