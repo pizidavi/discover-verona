@@ -119,7 +119,7 @@ $(document).ready(function () {
     CountDown('#countdown-open-day', day);
   }
 
-  CountDown('#countdown-hat', new Date('2022-10-16'));
+  CountDown('#countdown-hat', new Date('2022-10-16 9:00'));
 });
 
 $(window).on('load', function () {
