@@ -23,8 +23,8 @@ const SOCIAL = {
   instagram: 'https://www.instagram.com/discover.ultimate.verona',
 };
 const OPEN_DAYS = [
-  '2022-09-26',
-  '2022-10-06'
+  '2022-09-26 19:30',
+  '2022-10-06 19:30'
 ];
 // ---
 
@@ -100,6 +100,13 @@ $(document).ready(function () {
     }
   });
 
+  $('.btn-show').each(function () {
+    $(this).on('click', function () {
+      const target = $(this).attr('data-target');
+      $(target).toggleClass('show-more');
+    })
+  });
+
   $('#year').text(new Date().getFullYear());
 
   const now = new Date();
@@ -108,9 +115,11 @@ $(document).ready(function () {
     .filter(d => d - now >= 0)
     .sort((a,b) => a - b)[0];
   if (day) {
-    $('#countdown').removeClass('hidden');
-    CountDown('.countdown', day);
+    $('#countdown-open-day').removeClass('hidden');
+    CountDown('#countdown-open-day', day);
   }
+
+  CountDown('#countdown-hat', new Date('2022-10-16'));
 });
 
 $(window).on('load', function () {

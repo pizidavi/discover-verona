@@ -122,6 +122,16 @@ a:not([href]):not([class]):hover {
   text-decoration: none
 }
 
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 img {
   vertical-align: middle;
   border-style: none
@@ -817,6 +827,16 @@ small {
 
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--light-blue);
+  border-color: var(--blue)
+}
+
+.btn-primary:hover {
+  color: #fff !important;
 }
 
 .btn-info {
@@ -2645,6 +2665,18 @@ button.bg-info:hover {
 
 .text-center {
   text-align: center !important
+}
+
+.text-super {
+  vertical-align: super !important;
+  font-size: 55%;
+}
+
+.user-select-none {
+  -webkit-user-select: none!important;
+  -moz-user-select: none!important;
+  -ms-user-select: none!important;
+  user-select: none!important;
 }
 
 @media (min-width:576px) {
