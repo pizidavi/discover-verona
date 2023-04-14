@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 :root {
   --black: #171717;
   --gray: #c1c1c1;
+  --light-gray: #eee;
   --white: #fefefe;
   --blue: #4272e1;
   --light-blue: #45aaf2;
@@ -145,6 +146,54 @@ hr.fancy:after {
 
 iframe {
   border: none
+}
+
+details {
+	margin-top: .5rem;
+}
+
+details summary {
+	background-color: var(--light-blue);
+  color: var(--white);
+  font-weight: 600;
+}
+
+details[open] summary:before {
+	content: "↑";
+}
+
+details div {
+	border-left: 1px solid var(--gray);
+	border-right: 1px solid var(--gray);
+	border-bottom: 1px solid var(--gray);
+	padding: 1em;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  list-style: none;
+	border: 1px solid var(--gray);
+	padding: .75em 1rem;
+	cursor: pointer;
+	position: relative;
+  user-select: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary:before {
+	content: "↓";
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.75rem;
+	height: 1.75rem;
+  margin-right: .5rem;
+	/* color: var(--black); */
+	color: var(--white);
 }
 
 .responsive-iframe-container {
@@ -337,10 +386,10 @@ ul.callbacks_tabs.callbacks2_tabs {
 .banner-text h1 {
   width: 100%;
   margin: 15px 0;
-  font-family: Dscvr;
+  font-family: Dscvr, sans-serif;
   font-weight: 100;
-  font-size: 72px;
-  letter-spacing: 7px;
+  font-size: 65px;
+  letter-spacing: 4px;
   color: var(--yellow);
   text-transform: capitalize;
   text-shadow: 1px 1px 4px var(--black)
