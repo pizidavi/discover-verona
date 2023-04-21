@@ -795,10 +795,43 @@ a.read-agileits:hover {
 
 .footer {
   background: var(--black);
-  padding-top: 3em;
+  padding-top: 4em;
   padding-bottom: 1em !important
 }
 
+.footer_grids {
+  margin-bottom: 2em
+}
+
+.footer_grid_list li {
+	list-style-type: none;
+	margin-bottom: .5em;
+	color: #999;
+	text-transform: uppercase;
+}
+
+.footer_grid_list li i {
+	color: #777777;
+	padding-right: .8em;
+}
+
+.footer_grid_list li a {
+	color: var(--white);
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+}
+
+.footer_grid_list li a:hover {
+	color: var(--light-blue);
+}
+
+.footer_grid_list li:last-child {
+	margin-bottom: 0;
+}
+
+.footer_grid h3,
 .services-right-agileits h4 {
   font-size: 21px;
   color: var(--black);
@@ -808,6 +841,7 @@ a.read-agileits:hover {
   letter-spacing: 2px
 }
 
+.footer_grid h3:after,
 .services-right-agileits h4:after {
   content: '';
   background: var(--light-blue);
@@ -1011,6 +1045,7 @@ a.read-agileits:hover {
     padding: 4em 0
   }
 
+  .footer_grid h3,
   .services-right-agileits h4 {
     font-size: 20px;
     letter-spacing: 1.5px
@@ -1040,6 +1075,15 @@ a.read-agileits:hover {
   .services-img-w3-agile {
     min-height: 385px
   }
+
+  .footer_grid_list li a {
+    font-size: 13px;
+  }
+
+  .footer_grid:nth-child(1) {
+		width: 100%;
+		margin-bottom: 2em;
+	}
 
   ul.resp-tabs-list {
     margin-top: 14px
@@ -1249,6 +1293,11 @@ a.read-agileits:hover {
     padding-top: 0 !important;
     padding-bottom: 1.5em !important
   }
+
+  .footer_grid:nth-child(1),
+  .footer_grid:nth-child(2) {
+    margin-bottom: 1.5em;
+  }
 }
 
 @media (max-width:900px) {
@@ -1298,6 +1347,7 @@ a.read-agileits:hover {
     line-height: 25px
   }
 
+  .footer_grid h3,
   .services-right-agileits h4 {
     font-size: 17px
   }
@@ -1390,6 +1440,10 @@ a.read-agileits:hover {
     font-size: 13px
   }
 
+  .footer_grid_list li a {
+    font-size: 12px;
+  }
+
   .icon-box {
     width: 50%;
     float: left
@@ -1458,6 +1512,14 @@ a.read-agileits:hover {
     margin: 1.7em 0 0;
     padding: 1em 0 0
   }
+
+  .footer_grid_list li {
+    margin-bottom: 0.7em;
+  }
+
+  .footer_grid_list li a {
+    font-size: 11px;
+  }
 }
 
 @media (max-width:600px) {
@@ -1483,6 +1545,7 @@ a.read-agileits:hover {
     font-size: 24px
   }
 
+  .footer_grid h3:after,
   .services-right-agileits h4:after {
     width: 13%;
     height: 1px;
@@ -1530,6 +1593,7 @@ a.read-agileits:hover {
     line-height: 17px
   }
 
+  .footer_grid h3,
   .services-right-agileits h4 {
     margin-bottom: .8em
   }
