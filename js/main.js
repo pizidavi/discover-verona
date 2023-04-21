@@ -1,88 +1,13 @@
 // main.js
 
-// Modifica le informazioni di contatto
-const CONTACT = {
-  email: 'discover.cusverona@gmail.com'
-};
-const WHERE = {
-  text: 'Via Montorio 114, Verona',
-  mapsLink: 'https://goo.gl/maps/yFJq3i7R1nDyJrof7',
-};
-const WHEN = [
-  {
-    weekday: 'Lunedì',
-    time: ['19:30', '21:30']
-  },
-  {
-    weekday: 'Giovedì',
-    time: ['19:30', '21:30']
-  },
-];
-const SOCIAL = {
-  facebook: 'https://www.facebook.com/DiscoverUltimateVerona',
-  instagram: 'https://www.instagram.com/discover.ultimate.verona',
-};
+// Modifica
 const OPEN_DAYS = [
   '2022-09-26 19:30',
   '2022-10-06 19:30'
 ];
-const FAQ = [
-  {
-    "name": "Come funziona l'Ultimate?",
-    "text": "Si gioca 7 contro 7 in un campo lungo come quello da calcio (100 metri), ma un po' più stretto (37 metri), e con due aree di meta alle estremità del campo profonde 18 metri.<br>L'obbiettivo è segnare più mete della squadra avversaria. Per fare meta bisogna passare il disco a un compagno che si trova all'interno della meta avversaria.<br>Se il disco cade a terra o viene intercettato da un avversario, il possesso passa all'altra squadra."
-  },
-  {
-    "name": "È uno sport di contatto?",
-    "text": "Non è previsto contatto fisico.<br>Non si può strappare il disco dalle mani, è possibile solo intercettarlo mentre è in aria."
-  },
-  {
-    "name": "Categorie di gioco?",
-    "text": "Maschile (detta \"open\" in quanto possono giocare anche le ragazze)<br>Femminile<br>Mixed (ogni squadra deve schierare un numero prestabilito di uomini e donne)"
-  },
-  {
-    "name": "Cos'è il Fair Play?",
-    "text": "L'Ultimate è uno sport autoarbitrato.<br>Non c'è l'arbitro e tutti i giocatori si impegnano nel rispetto delle regole e degli avversari."
-  },
-  {
-    "name": "Ci sono dei campionati?",
-    "text": "C'è un campionato nazionale diviso in seria A, B e C."
-  },
-];
 // ---
 
 $(document).ready(function () {
-
-  $('[data-contact-email]').text(CONTACT.email);
-  $('a[data-contact-email]').attr('href', 'mailto:' + CONTACT.email);
-
-  $('[data-where]').text(WHERE.text);
-  $('a[data-where]').attr('href', WHERE.mapsLink);
-
-  $('[data-when]').each(function (index) {
-    const _this = $(this);
-    _this.find('[data-weekday]').text(WHEN[index].weekday);
-    _this.find('[data-time] b').each(function (i) {
-      $(this).text(WHEN[index].time[i]);
-    });
-  });
-
-  $('a[data-social-facebook]').attr('href', SOCIAL.facebook);
-  $('a[data-social-instagram]').attr('href', SOCIAL.instagram);
-
-  $('#faq').removeClass('d-none');
-  FAQ.forEach((faq, index) => {
-    const faqHtml = `
-      <details ${index === 0 ? 'open' : ''}>
-        <summary>${faq.name}</summary><div>${faq.text}</div>
-      </details>
-    `;
-    const faqElement = $(faqHtml);
-    faqElement.on('click', () => {
-      umami.trackEvent('faq', { type: 'click', name: faq.name });
-    });
-    $('[data-faq]').append(faqElement);
-  });
-
   let video_forced_pause = false;
   const video = $('.video-background video');
   $('.video-background .video-control').on('click', () => {

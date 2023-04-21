@@ -107,6 +107,10 @@ ul {
   padding: 0
 }
 
+ul.list {
+  padding-inline-start: 20px;
+}
+
 hr.fancy {
   margin: 2.5em auto;
   position: relative;
@@ -166,7 +170,7 @@ details div {
 	border-left: 1px solid var(--gray);
 	border-right: 1px solid var(--gray);
 	border-bottom: 1px solid var(--gray);
-	padding: 1em;
+	padding: 1em 1.5rem;
 }
 
 summary {
@@ -451,7 +455,7 @@ span.video-text i {
 
 .about,
 .contact,
-.events,
+.section,
 .footer,
 .reasons-agileits-w3layouts,
 .services,
@@ -998,6 +1002,7 @@ a.read-agileits:hover {
 
   .about,
   .contact,
+  .section,
   .footer,
   .reasons-agileits-w3layouts,
   .services,
@@ -1067,6 +1072,7 @@ a.read-agileits:hover {
 
   .about,
   .contact,
+  .section,
   .footer,
   .reasons-agileits-w3layouts,
   .services,
@@ -1226,6 +1232,7 @@ a.read-agileits:hover {
 
   .about,
   .contact,
+  .section,
   .footer,
   .reasons-agileits-w3layouts,
   .services,
@@ -1397,6 +1404,7 @@ a.read-agileits:hover {
 
   .about,
   .contact,
+  .section,
   .footer,
   .reasons-agileits-w3layouts,
   .services,
@@ -1567,6 +1575,7 @@ a.read-agileits:hover {
 
   .about,
   .contact,
+  .section,
   .footer,
   .reasons-agileits-w3layouts,
   .services,
