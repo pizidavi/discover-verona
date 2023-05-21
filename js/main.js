@@ -1,14 +1,9 @@
 // main.js
-
-// Modifica
-const OPEN_DAYS = [
-  '2022-09-26 19:30',
-  '2022-10-06 19:30'
-];
-// ---
+const now = new Date();
 
 $(document).ready(function () {
   let video_forced_pause = false;
+
   const video = $('.video-background video');
   $('.video-background .video-control').on('click', () => {
     if (video.get(0).paused) {
@@ -70,17 +65,14 @@ $(document).ready(function () {
 
   $('#year').text(new Date().getFullYear());
 
-  const now = new Date();
-  const day = OPEN_DAYS
-    .map(d => new Date(d))
-    .filter(d => d - now >= 0)
-    .sort((a,b) => a - b)[0];
-  if (day) {
-    $('#countdown-open-day').removeClass('hidden');
-    CountDown('#countdown-open-day', day);
-  }
+  $('[data-countdown]').each(function () {
+    const _this = $(this);
+    const date = new Date(_this.attr('data-countdown'));
+    if (now > date) return;
 
-  CountDown('#countdown-hat', new Date('2022-10-16 9:00'));
+    CountDown(_this, date);
+    _this.removeClass('hidden');
+  });
 });
 
 $(window).on('load', function () {
@@ -90,26 +82,37 @@ $(window).on('load', function () {
   });
 });
 
-const CountDown = (selector, date) => {
+/**
+ * CountDown constructor
+ * @param {HTMLDivElement} countdown 
+ * @param {Date} date 
+ */
+const CountDown = (countdown, date) => {
+  const selector = 'data-countdown-text';
+
   const second = 1000,
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
-
-  const countdown = $(selector);
   const time = date.getTime();
 
-  const x = setInterval(() => {
+  const setTime = () => {
     const now = new Date().getTime();
     const distance = time - now;
 
-    countdown.find('[data-countdown-text="days"]').text(Math.floor(distance / (day)));
-    countdown.find('[data-countdown-text="hours"]').text(Math.floor((distance % (day)) / (hour)));
-    countdown.find('[data-countdown-text="minutes"]').text(Math.floor((distance % (hour)) / (minute)));
-    countdown.find('[data-countdown-text="seconds"]').text(Math.floor((distance % (minute)) / second));
+    countdown.find(`[${selector}="days"]`).text(Math.floor(distance / (day)));
+    countdown.find(`[${selector}="hours"]`).text(Math.floor((distance % (day)) / (hour)));
+    countdown.find(`[${selector}="minutes"]`).text(Math.floor((distance % (hour)) / (minute)));
+    countdown.find(`[${selector}="seconds"]`).text(Math.floor((distance % (minute)) / second));
 
-    if (distance < 0) {
-      countdown.remove();
+    return distance < 0;
+  };
+
+  setTime();
+  const x = setInterval(() => {
+    const stop = setTime();
+    if (stop) {
+      countdown.addClass('hidden');
       clearInterval(x);
     }
   }, 1000);
