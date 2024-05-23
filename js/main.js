@@ -68,7 +68,10 @@ $(document).ready(function () {
   $('[data-countdown]').each(function () {
     const _this = $(this);
     const date = new Date(_this.attr('data-countdown'));
-    if (now > date) return;
+    if (now > date) {
+      _this.closest('[data-event-title]').remove();
+      return;
+    }
 
     CountDown(_this, date);
     _this.removeClass('hidden');
