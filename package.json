@@ -1,0 +1,10 @@
+{
+  "name": "discover-verona",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8"
+  }
+}

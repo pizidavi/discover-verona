@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+
+import sys
+import os
+from lxml import etree
+from datetime import date
+
+
+FILENAME = './sitemap.xml'
+TODAY = date.today().strftime('%Y-%m-%d')
+
+
+def parse_tag(element: str):
+    element = str(element)
+    if element[0] == '{':
+        namespace, ignore, tag = element[1:].partition('}')
+        return namespace, tag
+    return None, element
+
+
+document = etree.parse(FILENAME)
+root = document.getroot()
+tag = parse_tag(root.tag)
+
+url_tag = '{%s}url' % tag[0]
+loctag = '{%s}loc' % tag[0]
+lastmod_tag = '{%s}lastmod' % tag[0]
+
+for sitemap in root.findall(url_tag):
+    # loc = sitemap.find(loctag).text
+    lastmod = sitemap.find(lastmod_tag)
+    lastmod.text = TODAY
+
+result = etree.tostring(
+    document,
+    pretty_print=True,
+    xml_declaration=False,
+    doctype='<?xml version="1.0" encoding="UTF-8"?>',
+    encoding='UTF-8')
+
+with open(FILENAME, 'wb') as fp:
+    fp.write(result)
+
+os.system('git add %s' % FILENAME)
+
+print('%s updated' % FILENAME)
+
+sys.exit(0)
