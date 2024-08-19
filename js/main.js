@@ -76,6 +76,9 @@ $(document).ready(function () {
     CountDown(_this, date);
     _this.removeClass('hidden');
   });
+
+  if ($('[data-event-title]').length === 0){
+    $('#events').remove();}
 });
 
 $(window).on('load', function () {
