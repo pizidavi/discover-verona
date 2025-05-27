@@ -68,9 +68,16 @@ $(document).ready(function () {
   $('[data-countdown]').each(function () {
     const _this = $(this);
     const date = new Date(_this.attr('data-countdown'));
-    if (now > date) {
+    const until = _this.attr('data-countdown-until');
+    if (!until && now >= date) {
       _this.closest('[data-event-title]').remove();
       return;
+    } else if (until) {
+      const _until = new Date(until);
+      if (now >= _until) {
+        _this.closest('[data-event-title]').remove();
+        return;
+      }
     }
 
     CountDown(_this, date);
@@ -111,10 +118,13 @@ const CountDown = (countdown, date) => {
     countdown.find(`[${selector}="minutes"]`).text(Math.floor((distance % (hour)) / (minute)));
     countdown.find(`[${selector}="seconds"]`).text(Math.floor((distance % (minute)) / second));
 
-    return distance < 0;
+    return distance <= 0;
   };
 
-  setTime();
+  const stop = setTime();
+  if (stop)
+    countdown.addClass('hidden');
+
   const x = setInterval(() => {
     const stop = setTime();
     if (stop) {
