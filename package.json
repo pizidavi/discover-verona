@@ -2,7 +2,8 @@
   "name": "discover-verona",
   "private": true,
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "python -m http.server 3000"
   },
   "devDependencies": {
     "husky": "^8"
