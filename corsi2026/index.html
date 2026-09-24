@@ -370,7 +370,7 @@
       <div class="field">
         <label for="f-tel">Numero di telefono</label>
         <input type="tel" id="f-tel" name="telefono" autocomplete="tel" inputmode="tel" required placeholder="Es. 345 123 4567">
-        <p class="field__error" data-error-for="telefono">Inserisci un numero di telefono valido.</p>
+        <p class="field__error" data-error-for="telefono">Inserisci un numero di telefono (almeno 6 cifre).</p>
       </div>
 
       <fieldset class="field field--radio">
@@ -409,6 +409,7 @@
       <div class="success__icon" aria-hidden="true">✓</div>
       <h3 class="success__title">Preiscrizione ricevuta!</h3>
       <p>Grazie <strong data-success-name></strong>, ci vediamo mercoledì <strong>7 ottobre</strong> al Centro De Stefani. Ti scriviamo a breve con tutte le informazioni.</p>
+      <p class="success__dup" data-success-duplicate hidden>Eri già in lista con questo nome e numero: non serviva riscriverti, ma ci fa piacere rivederti.</p>
       <p class="success__small">Porta scarpe da ginnastica e vestiti comodi. Il disco lo mettiamo noi.</p>
       <button type="button" class="btn btn--blue" data-close-form>Chiudi</button>
     </div>

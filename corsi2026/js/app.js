@@ -72,19 +72,19 @@
     if (input.type !== 'radio' && input.type !== 'checkbox') input.setAttribute('aria-invalid', invalid ? 'true' : 'false');
   }
 
-  function normalizePhone(v) {
-    return v.replace(/[\s().-]/g, '');
+  function phoneDigits(v) {
+    return v.replace(/\D/g, '');
   }
 
   function validate() {
     var ok = true;
     var nome = form.nome.value.trim();
-    var tel = normalizePhone(form.telefono.value);
+    var tel = phoneDigits(form.telefono.value);
     var corso = form.querySelector('input[name="corso"]:checked');
     var privacy = form.privacy.checked;
 
     var nomeOk = nome.length >= 2;
-    var telOk = /^\+?\d{8,15}$/.test(tel);
+    var telOk = tel.length >= 6 && tel.length <= 15;
 
     setInvalid('nome', !nomeOk); if (!nomeOk) ok = false;
     setInvalid('telefono', !telOk); if (!telOk) ok = false;
@@ -139,7 +139,7 @@
       })
       .then(function (json) {
         if (json && json.ok === false) throw new Error(json.error || 'server');
-        showSuccess();
+        showSuccess(!!(json && json.duplicate));
       })
       .catch(function (err) {
         console.error('[preiscrizione] errore invio', err);
@@ -151,9 +151,11 @@
       });
   });
 
-  function showSuccess() {
+  function showSuccess(duplicate) {
     var nameEl = success.querySelector('[data-success-name]');
     if (nameEl) nameEl.textContent = form.nome.value.trim().split(' ')[0];
+    var dup = success.querySelector('[data-success-duplicate]');
+    if (dup) dup.hidden = !duplicate;
     form.hidden = true;
     success.hidden = false;
     var closeBtn = success.querySelector('button');

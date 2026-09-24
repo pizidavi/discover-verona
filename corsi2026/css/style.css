@@ -308,6 +308,7 @@ ul { padding-left: 1.2em; }
 .success__icon { width: 4rem; height: 4rem; margin: 0 auto 1rem; border-radius: 50%; background: var(--yellow); color: var(--blue); display: grid; place-items: center; font-size: 2rem; font-weight: 700; box-shadow: var(--shadow-3d); }
 .success__title { margin: 0 0 .5em; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; color: var(--blue); font-size: 1.7rem; }
 .success__small { color: var(--muted); font-size: .92rem; }
+.success__dup { color: var(--blue); font-size: .95rem; background: var(--yellow-pale); border-radius: 10px; padding: .6rem .9rem; }
 
 @media (min-width: 700px) {
   .sheet { inset: 0; margin: auto; width: min(100%, 560px); height: fit-content; }
