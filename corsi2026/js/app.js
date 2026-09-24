@@ -6,7 +6,7 @@
   // === CONFIG ===============================================================
   // URL della Web App di Google Apps Script (vedi README.md → "Collegare il form a Google Sheet").
   // Finché è vuoto, il form mostra un errore e NON invia nulla.
-  var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw1OLAMOUogMSu2K9YHf4XnM98rQ9dl0IJBmBNXz6t84zTN_DQz1PZGxsKZMJc5-6Q/exec';
+  var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwt9U-l4OeqYMca8SX8b7lwvhbuZrw1koJQuvw2LmWUEpWzVeOFhGfNKtQLKAd0pQQ/exec';
   // Chiave condivisa con Code.gs (FORM_KEY). Deve essere identica nei due file.
   var FORM_KEY = 'gjkCBp10zGLF5ANeEoiOVydX';
   // ==========================================================================
